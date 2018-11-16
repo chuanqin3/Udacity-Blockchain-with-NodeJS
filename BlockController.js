@@ -25,12 +25,22 @@ class BlockController {
      */
     getBlockByHeight() {
       this.app.get("/api/block/:height", async (req, res) => {
-        const block = await blockchain.getBlock(req.params.height)
-        res.send(block)
-        // res.json({
-        //   success: true,
-        //   data: "test getBlockByHeight"
-        // })
+        try {
+          const block = await blockchain.getBlock(req.params.height)
+          if (block) {
+            res.send(block)
+          } else {
+            res.status(404).json({
+              success: false,
+              message: `Block ${req.params.height} is not found.`
+            })
+          }
+        } catch (error) {
+          res.status(404).json({
+            success: false,
+            message: `Block ${req.params.height} is not found.`
+          })
+        }
       });
     }
 

@@ -1,6 +1,7 @@
 const SHA256 = require('crypto-js/sha256');
 const Block = require('./Block.js');
 const Blockchain = require('./simpleChain.js');
+const blockchain = new Blockchain();
 
 /**
  * Controller Definition to encapsulate routes to work with blocks
@@ -23,12 +24,13 @@ class BlockController {
      * Implement a GET Endpoint to retrieve a block by index, url: "/api/block/:index"
      */
     getBlockByHeight() {
-      this.app.get("/api/block/:height", (req, res) => {
-        // Add your code here
-        res.json({
-          success: true,
-          data: "test getBlockByHeight"
-        })
+      this.app.get("/api/block/:height", async (req, res) => {
+        const block = await blockchain.getBlock(req.params.height)
+        res.send(block)
+        // res.json({
+        //   success: true,
+        //   data: "test getBlockByHeight"
+        // })
       });
     }
 

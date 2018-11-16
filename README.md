@@ -18,7 +18,7 @@ This project uses **Express.js** as the Node.js framework.
 ```
 npm init
 ```
-*Note: the entry point is `app.js`
+*Note: the entry point is `app.js`*
 - Install crypto-js with --save flag to save dependency to our package.json file
 ```
 npm install crypto-js --save

@@ -64,9 +64,7 @@ class BlockController {
             await blockchain.addBlock(newBlock)
 
             // verify and return the most recently added block
-            const newHeight = await blockchain.getBlockHeight()
-            const mostRecentBlock = await blockchain.getBlock(newHeight)
-            res.status(201).send(mostRecentBlock)
+            res.status(201).send(newBlock)
             }
         } catch (error) {
           res.status(400).json({

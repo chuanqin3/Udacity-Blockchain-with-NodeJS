@@ -32,7 +32,25 @@ npm install level --save
 npm install express --save
 ```
 
-## Testing
+## Testing Node.JS server
+To start the server:
+```
+node app.js
+```
+### Endpoints
+#### GET
+**Get the information of a block by height**
+Sample input:
+
+Sample output:
+
+#### POST
+**Post a new block to the chain**
+Sample input:
+
+Sample output:
+
+## Testing simpleChain.js
 
 To test code:
 1. Open a command prompt or shell terminal after install node.js.

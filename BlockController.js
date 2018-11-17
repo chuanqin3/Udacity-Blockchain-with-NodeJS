@@ -48,12 +48,32 @@ class BlockController {
      * Implement a POST Endpoint to add a new Block, url: "/api/block"
      */
     postNewBlock() {
-      this.app.post("/api/block", (req, res) => {
-        // Add your code here
-        res.json({
-          success: true,
-          data: "test postNewBlock"
-        })
+      this.app.post("/api/block", async (req, res) => {
+        try {
+          // define the string script that will be written into block
+          const script = req.body.body
+          // Check if there is any content. No content no new block
+          if (script === undefined || script === '') {
+            res.status(400).json({
+              success: false,
+              message: "Please check your request, which might be empty, undefined, or in a wrong format."
+            })
+          } else {
+            // add new block to the chain
+            const newBlock = new Block(script)
+            await blockchain.addBlock(newBlock)
+
+            // verify and return the most recently added block
+            const newHeight = await blockchain.getBlockHeight()
+            const mostRecentBlock = await blockchain.getBlock(newHeight)
+            res.status(201).send(mostRecentBlock)
+            }
+        } catch (error) {
+          res.status(400).json({
+            success: false,
+            message: `There is an error with creating the new block. Error: ${error}`
+          })
+        }
       });
     }
 

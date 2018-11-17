@@ -50,7 +50,7 @@ function getBlockchainHeight() {
     })
     .on('close', function () {
       // resolve with the count value
-      console.log('getBlockchainHeight() invoked. The block height is ', height)
+      // console.log('getBlockchainHeight() invoked. The block height is ', height)
       resolve(height)
     });
   });

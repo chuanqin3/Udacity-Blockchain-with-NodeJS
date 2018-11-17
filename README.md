@@ -1,4 +1,4 @@
-# Blockchain Data
+# Private Blockchain
 
 Blockchain has the potential to change the way that the world approaches data. Develop Blockchain skills by understanding the data model behind Blockchain by developing your own simplified private blockchain.
 
@@ -40,10 +40,12 @@ node app.js
 ### Endpoints
 Below is an instruction of how to use Postman to test the endpoints:
 #### GET
-**Get the information of a block by height**
+*Get the information of a block by height*
+
+![Image of GET method to get the info of a block](https://github.com/chuanqin3/Udacity-Blockchain-with-NodeJS/blob/master/InstructionPictures/get-block-intro.png)
 
 #### POST
-**Post a new block to the chain**
+*Post a new block to the chain*
 
 ![Image of POST method to create a new block](https://github.com/chuanqin3/Udacity-Blockchain-with-NodeJS/blob/master/InstructionPictures/post-block-intro.png)
 

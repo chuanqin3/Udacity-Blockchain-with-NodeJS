@@ -45,8 +45,7 @@ Below is an instruction of how to use Postman to test the endpoints:
 #### POST
 **Post a new block to the chain**
 
-![Image of POST method to create a new block]
-(https://github.com/chuanqin3/Udacity-Blockchain-with-NodeJS/blob/master/InstructionPictures/post-block-intro.png)
+![Image of POST method to create a new block](https://github.com/chuanqin3/Udacity-Blockchain-with-NodeJS/blob/master/InstructionPictures/post-block-intro.png)
 
 ## Testing simpleChain.js
 

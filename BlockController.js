@@ -24,7 +24,7 @@ class BlockController {
      * Implement a GET Endpoint to retrieve a block by index, url: "/api/block/:index"
      */
     getBlockByHeight() {
-      this.app.get("/api/block/:height", async (req, res) => {
+      this.app.get("/block/:height", async (req, res) => {
         try {
           const block = await blockchain.getBlock(req.params.height)
           if (block) {
@@ -48,7 +48,7 @@ class BlockController {
      * Implement a POST Endpoint to add a new Block, url: "/api/block"
      */
     postNewBlock() {
-      this.app.post("/api/block", async (req, res) => {
+      this.app.post("/block", async (req, res) => {
         try {
           // define the string script that will be written into block
           const script = req.body.body

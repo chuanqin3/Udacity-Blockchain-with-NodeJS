@@ -38,17 +38,15 @@ To start the server:
 node app.js
 ```
 ### Endpoints
+Below is an instruction of how to use Postman to test the endpoints:
 #### GET
 **Get the information of a block by height**
-Sample input:
-
-Sample output:
 
 #### POST
 **Post a new block to the chain**
-Sample input:
 
-Sample output:
+![Image of POST method to create a new block]
+(https://github.com/chuanqin3/Udacity-Blockchain-with-NodeJS/blob/master/InstructionPictures/post-block-intro.png)
 
 ## Testing simpleChain.js
 

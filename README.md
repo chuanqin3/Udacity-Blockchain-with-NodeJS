@@ -42,12 +42,12 @@ The sever will run on http://localhost:8000/
 ### Endpoints
 Below is an instruction of how to use Postman to test the endpoints:
 #### GET
-1. Get the information of a block by height
+1. Get the information of a block by height (note: please remove the `api` from the web link)
 
 ![Image of GET method to get the info of a block](https://github.com/chuanqin3/Udacity-Blockchain-with-NodeJS/blob/master/InstructionPictures/get-block-intro.png)
 
 #### POST
-1. Post a new block to the chain
+1. Post a new block to the chain (note: please remove the `api` from the web link)
 
 ![Image of POST method to create a new block](https://github.com/chuanqin3/Udacity-Blockchain-with-NodeJS/blob/master/InstructionPictures/post-block-intro.png)
 
